@@ -1,0 +1,29 @@
+﻿---
+config:
+  flowchart:
+    curve: linear
+---
+graph TD;
+	__start__([<p>__start__</p>]):::first
+	guard(guard)
+	classify(classify)
+	retrieve(retrieve)
+	draft(draft)
+	route(route)
+	auto_reply(auto_reply)
+	human_review(human_review)
+	__end__([<p>__end__</p>]):::last
+	__start__ --> guard;
+	classify -.-> retrieve;
+	classify -.-> route;
+	draft --> route;
+	guard --> classify;
+	retrieve --> draft;
+	route -.-> auto_reply;
+	route -.-> human_review;
+	auto_reply --> __end__;
+	human_review --> __end__;
+	classDef default fill:#f2f0ff,line-height:1.2
+	classDef first fill-opacity:0
+	classDef last fill:#bfb6fc
+

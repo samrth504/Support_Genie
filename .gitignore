@@ -1,0 +1,51 @@
+# ---------------------------------------------------------------- secrets
+# Real keys live ONLY in backend/.env and frontend/.env (never committed).
+.env
+.env.*
+*.env
+!.env.example
+!**/.env.example
+
+# ---------------------------------------------------------------- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+*.egg-info/
+
+# local SQLite files (tests use in-memory / temp DBs)
+*.db
+*.sqlite
+*.sqlite3
+
+# ---------------------------------------------------------------- Node / frontend
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+
+# ---------------------------------------------------------------- ML
+# Dataset stays local (download steps in ml/data/README.md); only the README + .gitkeep are committed.
+ml/data/*
+!ml/data/.gitkeep
+!ml/data/README.md
+# The trained model IS committed (backend/ml_models/classifier.joblib, ~430 KB).
+# Downloaded embedding-model caches are NOT (fastembed re-downloads them):
+.cache/
+
+# ---------------------------------------------------------------- personal notes (kept local)
+CLAUDE.md
+SKILLS.md
+
+# ---------------------------------------------------------------- OS / editor / logs
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log

@@ -1,0 +1,10 @@
+# ML / data science dependencies (training + EDA only, not needed by the backend at runtime
+# except scikit-learn + joblib, which backend/requirements.txt will also list)
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+joblib
+ipykernel        # lets VS Code run Jupyter notebooks inside .venv
+nbconvert        # run notebooks from the terminal (jupyter nbconvert --execute)

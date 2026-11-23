@@ -1,0 +1,240 @@
+{
+  "model_name": "logistic_regression",
+  "trained_at": "2026-11-19T16:23:44+00:00",
+  "n_train": 19033,
+  "n_test": 4759,
+  "labels": [
+    "ACCOUNT",
+    "CANCEL",
+    "CONTACT",
+    "DELIVERY",
+    "FEEDBACK",
+    "INVOICE",
+    "ORDER",
+    "PAYMENT",
+    "REFUND",
+    "SHIPPING",
+    "SUBSCRIPTION"
+  ],
+  "cv_macro_f1": {
+    "logistic_regression": {
+      "mean": 0.99633085668288,
+      "std": 0.00071910515508095
+    },
+    "linear_svm": {
+      "mean": 0.9978258946855387,
+      "std": 0.001288460064918107
+    },
+    "complement_nb": {
+      "mean": 0.9947364143934099,
+      "std": 0.001041499433901655
+    }
+  },
+  "test_accuracy": 0.9966,
+  "test_macro_f1": 0.9968,
+  "train_macro_f1": 0.9992,
+  "real_world_accuracy": 1.0,
+  "real_world_examples": [
+    {
+      "text": "I forgot my password and can't log in to my account",
+      "expected": "ACCOUNT",
+      "predicted": "ACCOUNT",
+      "confidence": 0.893
+    },
+    {
+      "text": "how do i delete my profile permanently",
+      "expected": "ACCOUNT",
+      "predicted": "ACCOUNT",
+      "confidence": 0.814
+    },
+    {
+      "text": "where is my order 4582913, it was supposed to come yesterday",
+      "expected": "ORDER",
+      "predicted": "ORDER",
+      "confidence": 0.473
+    },
+    {
+      "text": "I want to change the size in the order I placed this morning",
+      "expected": "ORDER",
+      "predicted": "ORDER",
+      "confidence": 0.629
+    },
+    {
+      "text": "money was deducted twice for my purchase, please refund",
+      "expected": "REFUND",
+      "predicted": "REFUND",
+      "confidence": 0.854
+    },
+    {
+      "text": "how many days will the refund take to reach my bank",
+      "expected": "REFUND",
+      "predicted": "REFUND",
+      "confidence": 0.728
+    },
+    {
+      "text": "need the invoice INV-88231 for my office reimbursement",
+      "expected": "INVOICE",
+      "predicted": "INVOICE",
+      "confidence": 0.908
+    },
+    {
+      "text": "my UPI payment failed but amount got debited",
+      "expected": "PAYMENT",
+      "predicted": "PAYMENT",
+      "confidence": 0.684
+    },
+    {
+      "text": "which payment methods do you accept",
+      "expected": "PAYMENT",
+      "predicted": "PAYMENT",
+      "confidence": 0.949
+    },
+    {
+      "text": "how long does standard delivery take to Pune",
+      "expected": "DELIVERY",
+      "predicted": "DELIVERY",
+      "confidence": 0.464
+    },
+    {
+      "text": "I need to update the shipping address for my parcel",
+      "expected": "SHIPPING",
+      "predicted": "SHIPPING",
+      "confidence": 0.943
+    },
+    {
+      "text": "I want to talk to a human agent right now",
+      "expected": "CONTACT",
+      "predicted": "CONTACT",
+      "confidence": 0.977
+    },
+    {
+      "text": "your service is terrible, I want to file a complaint",
+      "expected": "FEEDBACK",
+      "predicted": "FEEDBACK",
+      "confidence": 0.918
+    },
+    {
+      "text": "unsubscribe me from your newsletter emails",
+      "expected": "SUBSCRIPTION",
+      "predicted": "SUBSCRIPTION",
+      "confidence": 0.99
+    },
+    {
+      "text": "is there any penalty if I cancel early",
+      "expected": "CANCEL",
+      "predicted": "CANCEL",
+      "confidence": 0.449
+    },
+    {
+      "text": "mera order abhi tak nahi aaya, kab aayega?",
+      "expected": "ORDER",
+      "predicted": "ORDER",
+      "confidence": 1.0
+    },
+    {
+      "text": "mujhe refund chahiye, paise wapas karo",
+      "expected": "REFUND",
+      "predicted": "REFUND",
+      "confidence": 0.988
+    },
+    {
+      "text": "password bhool gaya hoon, account kaise kholun",
+      "expected": "ACCOUNT",
+      "predicted": "ACCOUNT",
+      "confidence": 0.997
+    },
+    {
+      "text": "payment fail ho gaya par paise kat gaye",
+      "expected": "PAYMENT",
+      "predicted": "PAYMENT",
+      "confidence": 0.886
+    },
+    {
+      "text": "delivery address change karna hai",
+      "expected": "SHIPPING",
+      "predicted": "SHIPPING",
+      "confidence": 0.997
+    }
+  ],
+  "per_class": {
+    "ACCOUNT": {
+      "precision": 0.9961013645224172,
+      "recall": 0.9990224828934506,
+      "f1-score": 0.997559785261103,
+      "support": 1023.0
+    },
+    "CANCEL": {
+      "precision": 0.9947089947089947,
+      "recall": 1.0,
+      "f1-score": 0.9973474801061007,
+      "support": 188.0
+    },
+    "CONTACT": {
+      "precision": 1.0,
+      "recall": 0.9974554707379135,
+      "f1-score": 0.9987261146496815,
+      "support": 393.0
+    },
+    "DELIVERY": {
+      "precision": 0.9969230769230769,
+      "recall": 0.9938650306748467,
+      "f1-score": 0.9953917050691244,
+      "support": 326.0
+    },
+    "FEEDBACK": {
+      "precision": 0.9974937343358395,
+      "recall": 1.0,
+      "f1-score": 0.998745294855709,
+      "support": 398.0
+    },
+    "INVOICE": {
+      "precision": 0.9969230769230769,
+      "recall": 0.9969230769230769,
+      "f1-score": 0.9969230769230769,
+      "support": 325.0
+    },
+    "ORDER": {
+      "precision": 0.9933884297520661,
+      "recall": 0.9917491749174917,
+      "f1-score": 0.9925681255161024,
+      "support": 606.0
+    },
+    "PAYMENT": {
+      "precision": 1.0,
+      "recall": 0.9899244332493703,
+      "f1-score": 0.9949367088607595,
+      "support": 397.0
+    },
+    "REFUND": {
+      "precision": 0.9941972920696325,
+      "recall": 0.9980582524271845,
+      "f1-score": 0.9961240310077519,
+      "support": 515.0
+    },
+    "SHIPPING": {
+      "precision": 0.9974424552429667,
+      "recall": 1.0,
+      "f1-score": 0.998719590268886,
+      "support": 390.0
+    },
+    "SUBSCRIPTION": {
+      "precision": 1.0,
+      "recall": 0.9949494949494949,
+      "f1-score": 0.9974683544303797,
+      "support": 198.0
+    },
+    "accuracy": 0.9966379491489809,
+    "macro avg": {
+      "precision": 0.9970162204070974,
+      "recall": 0.9965406742520755,
+      "f1-score": 0.9967736606316978,
+      "support": 4759.0
+    },
+    "weighted avg": {
+      "precision": 0.9966429854264931,
+      "recall": 0.9966379491489809,
+      "f1-score": 0.9966362850758645,
+      "support": 4759.0
+    }
+  }
+}

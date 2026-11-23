@@ -1,0 +1,40 @@
+# --- Web framework ---
+fastapi>=0.115
+uvicorn[standard]>=0.30
+python-multipart>=0.0.9      # form data (OAuth2 login form, file uploads)
+
+# --- Config & validation ---
+pydantic>=2.7
+pydantic-settings>=2.3
+email-validator>=2.1         # EmailStr validation
+
+# --- Database ---
+sqlalchemy>=2.0
+psycopg[binary]>=3.1         # PostgreSQL driver (Neon)
+alembic>=1.13                # database migrations
+
+# --- Auth ---
+pyjwt>=2.8
+bcrypt>=4.1
+
+# --- RAG ---
+langchain-core>=0.3
+langchain-text-splitters>=0.3
+fastembed>=0.4               # ONNX embeddings on CPU (no PyTorch, no API key)
+pgvector>=0.3                # pgvector column type for SQLAlchemy
+pypdf>=4.0                   # read uploaded PDF docs
+
+# --- Agent / LLM ---
+langgraph>=0.4
+langgraph-checkpoint-postgres>=2.0   # saves paused graphs in Neon (human-in-the-loop)
+psycopg-pool>=3.2
+langchain-groq>=0.3                  # primary LLM (Llama 3.3 70B on Groq, free tier)
+langchain-google-genai>=2.0          # backup LLM (Gemini Flash, free tier)
+
+# --- ML serving ---
+scikit-learn>=1.5            # must match the version used for training
+joblib>=1.4
+
+# --- Testing ---
+pytest>=8.0
+httpx>=0.27                  # used by FastAPI's TestClient
